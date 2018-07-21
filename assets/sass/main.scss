@@ -1,0 +1,136 @@
+@import url( 'https://fonts.googleapis.com/css?family=Coda+Caption:800');
+@import "reset";
+
+$mainRed:#F4232F;
+$darkRed: #A21821;
+$blue: #354CA0;
+$grey: #dedede;
+$yellow: #DEB505;
+$green: #159B47;
+
+body {
+  font-family: 'Coda Caption', sans-serif;
+  background: $grey;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pokedex {
+  background: $mainRed;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  min-height: 500px;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  border: 4px solid $darkRed;
+
+  .lights {
+    display: inline-block;
+    div {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid black;
+      border-radius: 50%;
+      margin: 15px 5px 0;
+      &#blue {h1 {
+    display: block;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    margin: 25px 0;
+  }
+        background: $blue;
+        width: 40px;
+        height: 40px;
+        border: 3px solid #fff;
+        margin-top: 14px;
+      }
+      &#red {background: $darkRed; vertical-align: top;}
+      &#yellow {background: $yellow; vertical-align: top;}
+      &#green {background: $green; vertical-align: top;}
+    }
+  }
+
+  h1 {
+    display: block;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    margin: 25px 0;
+  }
+
+  #title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: right;
+    margin: 25px 0 25px 15px;
+  }
+
+  h3 {
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 25px 0;
+    text-transform: capitalize;
+  }
+  form {
+    text-align: center;
+  }
+  input[type="text"] {
+    font-size: 2rem;
+    margin: 25px auto;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid $grey;
+    text-align: center;
+    max-width: 80%;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 20px;
+    background: $blue;
+    margin: 0 auto 20px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .loading-container {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    display: none;
+    &.active {
+      display: flex;
+    }
+  }
+}
+
+.poke-img {
+  width: 150px;
+  height: 150px;
+  border: 5px solid $grey;
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 5px;
+  img {
+    width: 100%;
+  }
+}
