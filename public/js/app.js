@@ -46,6 +46,21 @@ $(function() {
     });
   })
 
+  // $('.pokedex input[type="text"]').attr("disabled", "disabled");
+
+  $('.pokedex input[type="text"]').on('keydown', function (e) {
+         if(e.which === 13){
+
+            //Disable textbox to prevent multiple submit
+            $(this).attr("disabled", "disabled");
+
+            $('.btn').click();
+
+            //Enable the textbox again if needed.
+            $(this).removeAttr("disabled");
+         }
+   });
+
 });
 
 /* TO DO

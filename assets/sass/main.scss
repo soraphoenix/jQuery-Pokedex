@@ -10,7 +10,11 @@ $green: #159B47;
 
 body {
   font-family: 'Coda Caption', sans-serif;
-  background: $grey;
+  background: $grey url(../img/field.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  height: 100vh;
 }
 
 * {
